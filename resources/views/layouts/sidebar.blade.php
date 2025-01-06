@@ -32,7 +32,7 @@
                 </a>
             </li>
             <li class="Button">
-                <a class="a_nav" href="#">
+                <a class="a_nav" href="/my-team">
                     <i class="fas fa-users"></i>
                     <span class="nav-item">Team</span>
                 </a>

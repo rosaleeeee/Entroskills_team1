@@ -13,8 +13,8 @@ use App\Http\Controllers\BusinessModelController;
 use App\Http\Controllers\ExerciseController;
 use App\Http\Controllers\BusController;
 use App\Http\Controllers\ScoreController;
-
-
+use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\TeamController;
 
 
 
@@ -202,6 +202,11 @@ Route::get('/level3/finlevel', function () {
 Route::get('/business-model/business-model/fin', function () {
     return view('level1.finlevel');
 })->name('finlevel'); 
+
+Route::get('/certificate', [CertificateController::class, 'show'])->name('certificate.show');
+Route::get('/certificate/download', [CertificateController::class, 'generate'])->name('certificate.generate');
+
+Route::get('/my-team', [TeamController::class, 'showTeam'])->name('team.show');
 
 Route::get('/fin', function () {
     return view('level1.finlevel');

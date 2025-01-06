@@ -38,6 +38,17 @@ class User extends Authenticatable implements MustVerifyEmail
      *
      * @return array<string, string>
      */
+     use HasFactory, Notifiable;
+
+    public function teams()
+    {
+        return $this->belongsToMany(Team::class, 'team_user', 'user_id', 'team_id');
+    }
+
+    public function currentTeam()
+    {
+        return $this->teams()->first(); // Récupère la première équipe
+    }
     public function votes()
     {
         return $this->hasMany(Vote::class);

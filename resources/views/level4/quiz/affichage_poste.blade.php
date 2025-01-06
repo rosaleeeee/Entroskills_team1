@@ -64,7 +64,8 @@
         </section>
     </main>   
     <div class="btcont" >
-        <button class="start-button" onclick="window.location.href='fin'">Next</button>
+        <button class="start-button" onclick="window.location.href='certificate'">Next</button>
+        <!-- <button class="start-button" onclick="window.location.href='fin'">Next</button> -->
     </div> 
    </div>   
     </body>
