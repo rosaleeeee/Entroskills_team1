@@ -6,7 +6,7 @@
     @endif
 
     <!-- Conteneur principal pour centrer tout le contenu -->
-    <div class="flex items-center justify-center min-h-screen bg-gray-300">
+    <div class="flex items-center justify-center min-h-screen bg-gray-3g00">
         <!-- Conteneur pour le formulaire -->
         <div class="bg-white p-8 rounded-lg shadow-lg w-full sm:w-96">
             <form method="POST" action="{{ route('login') }}">
