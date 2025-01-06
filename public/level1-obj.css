@@ -1,3 +1,4 @@
+/* Styles généraux */
 .container {
     margin-left: 200px;
 }
@@ -17,7 +18,6 @@
     width: 60px;
 }
 
-/* Ajouter un espace fixe entre "Submitted by", "Votes" et "Vote" */
 .idea-info {
     display: flex;
     align-items: center;
@@ -32,7 +32,6 @@
     font-weight: 500;
 }
 
-/* Style pour les boutons */
 .vote-button {
     background-color: #3377b7; /* Couleur de fond */
     color: #fff; /* Couleur du texte */
@@ -97,6 +96,7 @@
     cursor: pointer;
 }
 
+/* Fonts et box */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
 
 .bnm {
@@ -154,23 +154,23 @@
     width: 100%;
 }
 
-/* Centrer le bouton "See Results" */
 .see-results-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* Ajouter un espacement au-dessus du bouton */
+    margin-top: 20px;
 }
 
 .img-like-button {
-    background: none; /* Enlève l'arrière-plan */
-    border: none; /* Enlève la bordure */
-    cursor: pointer; /* Curseur pointer */
-    padding: 0; /* Enlève le padding */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
 .img_like {
     width: 35px;
 }
+
 .co_score {
     display: flex;
     align-items: center;
@@ -181,10 +181,98 @@
 .user-score {
     font-size: 18px;
     font-weight: 600;
-    margin-left: 10px; /* Espace entre l'image et le score */
+    margin-left: 10px;
     margin-right: 100px;
 }
 
 .dia_img {
     width: 30px;
+}
+
+/* Centrer la classe content-containe_r */
+.content-containe_r {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Rendre la page responsive */
+@media (max-width: 768px) {
+    .content-containe_r {
+        padding: 10px;
+    }
+
+    .smart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 10px;
+    }
+
+    .smart-letter {
+        font-size: 20px;
+    }
+
+    .smart-content h3 {
+        font-size: 18px;
+    }
+
+    .smart-content p {
+        font-size: 14px;
+    }
+
+    .form-containe_r {
+        width: 100%;
+    }
+
+    .form-containe_r input,
+    .form-containe_r textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .dia_img {
+        width: 20px;
+    }
+
+    .user-score {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .smart-letter {
+        font-size: 18px;
+    }
+
+    .smart-content h3 {
+        font-size: 16px;
+    }
+
+    .smart-content p {
+        font-size: 12px;
+    }
+
+    .dia_img {
+        width: 15px;
+    }
+
+    .user-score {
+        font-size: 14px;
+    }
+
+    .modal-content {
+        width: 90%;
+        max-width: 300px;
+    }
 }

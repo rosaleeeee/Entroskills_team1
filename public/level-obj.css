@@ -1,97 +1,210 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif; /* Change la police pour un look moderne */
     margin: 0;
     padding: 0;
     background-color: #EFEFEF;
+    text-align: center; /* Centrage global */
+}
+
+/* Petits appareils (smartphones en mode portrait, largeur inférieure à 600px) */
+@media (max-width: 600px) {
+    #content {
+        flex-direction: column; /* Les éléments s'empilent verticalement */
+        padding: 10px;
+    }
+
+    #left, #right {
+        margin: 0 auto;
+        max-width: 90%; /* Réduit la largeur pour s’adapter aux petits écrans */
+        text-align: center; /* Centre tout le texte */
+    }
+
+    #left h1 {
+        font-size: 24px; /* Réduction de la taille des titres */
+    }
+
+    #left h3 {
+        font-size: 20px;
+    }
+
+    #left ul ol {
+        font-size: 16px;
+    }
+
+    #right img {
+        width: 100%; /* L’image occupe toute la largeur disponible */
+        max-width: 300px; /* Limite la taille sur les très petits écrans */
+    }
+
+    .start_level_btn {
+        font-size: 16px; /* Taille réduite du texte sur le bouton */
+        width: 120px; /* Bouton plus petit */
+        height: 40px;
+    }
+}
+
+/* Tablettes (largeur entre 600px et 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+    #content {
+        flex-direction: column; /* Les éléments restent empilés */
+        padding: 20px;
+    }
+
+    #left, #right {
+        max-width: 80%; /* Ajuste la largeur */
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #left h1 {
+        font-size: 28px;
+    }
+
+    #left ul ol {
+        font-size: 18px;
+    }
+
+    #right img {
+        max-width: 400px; /* Image légèrement réduite */
+    }
+
+    .start_level_btn {
+        font-size: 18px;
+        width: 140px;
+        height: 45px;
+    }
+}
+
+/* Grands écrans (au-dessus de 900px) */
+@media (min-width: 900px) {
+    #content {
+        flex-direction: row; /* Les éléments s’alignent côte à côte */
+        justify-content: space-between; /* Ajoute un espacement entre les éléments */
+        max-width: 1200px; /* Augmente la largeur totale */
+        margin: 0 auto; /* Centre le contenu */
+        padding: 40px; /* Ajoute de l'espace autour */
+    }
+
+    #left, #right {
+        max-width: 80%; /* Les deux sections occupent maintenant 60% pour laisser plus de place au texte */
+        text-align: left; /* Le texte reste aligné à gauche */
+    }
+
+    #left h1 {
+        font-size: 36px; /* Augmente la taille du titre */
+        margin-bottom: 25px;
+    }
+
+    #left h3 {
+        font-size: 28px; /* Augmente la taille des sous-titres */
+    }
+
+    #left ul ol {
+        font-size: 20px; /* Augmente légèrement la taille du texte de la liste */
+    }
+
+    #right img {
+        width: 800px; /* Augmente la taille de l'image */
+        height: auto; /* Maintient les proportions */
+    }
+
+    .start_level_btn {
+        font-size: 22px; /* Agrandit le texte du bouton */
+        width: 180px; /* Augmente la largeur du bouton */
+        height: 55px; /* Augmente la hauteur du bouton */
+    }
 }
 
 #content {
     display: flex;
-    margin-top: 0px;
-    margin-left: 200px;
+    flex-direction: column; /* Affiche les éléments dans une colonne pour centrer verticalement */
+    align-items: center; /* Centre horizontalement les éléments */
+    margin: 0 auto; /* Centrage horizontal global */
+    max-width: 1000px; /* Limite la largeur pour un design responsive */
 }
 
 .co_score {
-display: flex;
-align-items: center;
-justify-content: flex-end;
-margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrer l'élément */
+    margin-bottom: 10px;
 }
 
 .user-score {
-font-size: 18px;
-font-weight: 600;
-margin-left: 10px; /* Espace entre l'image et le score */
-margin-right: 100px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 10px;
 }
 
 .dia_img {
-width: 30px;
+    width: 30px;
 }
 
 #left {
-    flex: 1;
-    padding-right: 20px;
-    margin-top: 0px;
-    margin : 10%;
-    margin-right : 10px;
-    max-width: 50%;
-    margin-left: 20px;
+    text-align: center; /* Centre le texte */
+    padding: 20px;
+    margin: 0 auto;
 }
 
 #left h1 {
-    color: black;
-    font-size: 30px;
-    color:#13538A;
+    color: #13538A;
+    font-size: 32px;
     text-transform: uppercase;
     font-weight: 700;
-
+    margin-bottom: 20px; /* Ajoute un espacement sous le titre */
 }
+
 #left h3 {
-    font-size: 25px; 
+    font-size: 24px;
     font-weight: 500;
     color: #0d9631;
-
+    margin-bottom: 10px; /* Espacement sous l'objectif */
 }
+
+#left ul {
+    padding-left: 20px; /* Ajoute un retrait pour les listes */
+    text-align: left; /* Aligne les listes à gauche pour une meilleure lisibilité */
+    margin: 0 auto;
+}
+
 #left ul ol {
-    font-size: 20px; 
-    font-weight: 200;
+    font-size: 18px;
+    font-weight: 400;
     color: #040805;
-
+    margin-bottom: 10px; /* Espacement entre les éléments de liste */
 }
+
 #left p {
-    font-size: 20px; 
-    font-weight: 200;
+    font-size: 20px;
+    font-weight: 400;
     color: #040805;
+    margin-bottom: 20px;
+}
 
-}
-ul{
-    list-style-type: circle;
-    list-style-type: circle;
-}
 #right img {
-    width: 600px;
+    width: 400px; /* Redimensionne pour un look plus équilibré */
     height: auto;
-    margin-right : 100px;
-    
+    margin: 20px auto;
 }
+
 .conteneur {
     text-align: center;
-  }
-.start_level_btn{ 
+    margin-top: 20px;
+}
+
+.start_level_btn {
     background-color: #f7c33d;
     color: black;
     border: none;
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
     font-size: 20px;
-    border-radius:  30px;
-    width:130px;
-    height:50px;
-    text-align:center;
-    margin-bottom: 20px;;
-    }
+    border-radius: 30px;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .start_level_btn:hover {
     background-color: #e5b02e;
-     /* Changement de couleur au survol du bouton */
 }

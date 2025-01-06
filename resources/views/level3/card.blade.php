@@ -7,13 +7,13 @@
         }
     </script>
     <main>
-    <h2 style="font-size: 20px; color: #5398D4; text-align: center; margin-top: 18px;">
-    Explore Key Roles: Click 'Read More' to Discover Detailed Descriptions of Each Position.
+    <h2   class="alert">
+    Explore Key Roles: Click <span style=" color:#ffd700 ; font:bold"  > 'Read More'  </span> to Discover Detailed Descriptions of Each Position.
 </h2>
         <div style="display: flex; height: 85vh;">
             <div style="width: 100px; color: black; padding: 20px;">
-                <!-- start navbar --> 
-                @include('layouts.sidebar')    
+                <!-- start navbar -->
+                @include('layouts.sidebar')
                 <!-- end navbar -->
             </div>
 
@@ -22,7 +22,7 @@
                     <!-- Card 1 -->
                     <div class="card">
                         <div class="img-box">
-                           <img src="{{ asset('images/pm1.png') }}" alt="Community Manager"> 
+                           <img src="{{ asset('images/pm1.png') }}" alt="Community Manager">
                         </div>
                         <div class="card-content">
                             <h1 class="card-heading">Product Manager</h1>
@@ -32,7 +32,7 @@
                     <!-- Card 2 -->
                     <div class="card">
                         <div class="img-box">
-                           <img src="{{ asset('images/sm.png') }}" alt="Sales Manager"> 
+                           <img src="{{ asset('images/sm.png') }}" alt="Sales Manager">
                         </div>
                         <div class="card-content">
                             <h1 class="card-heading">Sales Manager</h1>
@@ -42,7 +42,7 @@
                     <!-- Card 3 -->
                     <div class="card">
                         <div class="img-box">
-                           <img src="{{ asset('images/pm.png') }}" alt="Partnership Manager"> 
+                           <img src="{{ asset('images/pm.png') }}" alt="Partnership Manager">
                         </div>
                         <div class="card-content">
                             <h1 class="card-heading">Partnership Manager</h1>
@@ -51,7 +51,7 @@
                     </div>
                     <div class="card">
                         <div class="img-box">
-                           <img src="{{ asset('images/csm.png') }}" alt="Customer Service Manager"> 
+                           <img src="{{ asset('images/csm.png') }}" alt="Customer Service Manager">
                         </div>
                         <div class="card-content">
                             <h1 class="card-heading">Customer Service Manager</h1>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="card">
                         <div class="img-box">
-                           <img src="{{ asset('images/mm.png') }}" alt="Marketing manager"> 
+                           <img src="{{ asset('images/mm.png') }}" alt="Marketing manager">
                         </div>
                         <div class="card-content">
                             <h1 class="card-heading">Marketing manager</h1>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="card">
                         <div class="img-box">
-                           <img src="{{ asset('images/cfo.png') }}" alt="Chief Financial Officer"> 
+                           <img src="{{ asset('images/cfo.png') }}" alt="Chief Financial Officer">
                         </div>
                         <div class="card-content">
                             <h1 class="card-heading">Chief Financial Officer</h1>
@@ -78,7 +78,7 @@
                     </div>
                     <div class="card">
                         <div class="img-box">
-                           <img src="{{ asset('images/coo.png') }}" alt="Chief Operating Officer"> 
+                           <img src="{{ asset('images/coo.png') }}" alt="Chief Operating Officer">
                         </div>
                         <div class="card-content">
                             <h1 class="card-heading">Chief Operating Officer</h1>
@@ -87,7 +87,7 @@
                     </div>
                     <div class="card">
                         <div class="img-box">
-                           <img src="{{ asset('images/pjm.png') }}" alt="Project Manager"> 
+                           <img src="{{ asset('images/pjm.png') }}" alt="Project Manager">
                         </div>
                         <div class="card-content">
                             <h1 class="card-heading">Project Manager</h1>
@@ -96,7 +96,7 @@
                     </div>
                     <div class="card">
                         <div class="img-box">
-                           <img src="{{ asset('images/a.png') }}" alt=" Accountant"> 
+                           <img src="{{ asset('images/a.png') }}" alt=" Accountant">
                         </div>
                         <div class="card-content">
                             <h1 class="card-heading"> Accountant</h1>
@@ -142,7 +142,7 @@
         <div class="content">
             <div class="close-btn" onclick="togglePopup('popup-4')">&times;</div>
             <h1>Customer Service Manager</h1>
-            <p>Oversees the customer service department to ensure customers receive prompt and effective support.  
+            <p>Oversees the customer service department to ensure customers receive prompt and effective support.
          and implements policies to improve customer satisfaction.</p>
         </div>
     </div>

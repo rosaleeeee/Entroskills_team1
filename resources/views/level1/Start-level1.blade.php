@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="{{ asset('Start-level.css') }}" rel="stylesheet">
         <title>start</title>
-    </head>  
+    </head>
 <body>
     @include('layouts.sidebar')
     <div class="container">
@@ -15,6 +15,6 @@
         <button class="start-button" onclick="window.location.href='BUSINESSMODEL'">start</button>
     </div>
 </body>
- 
+
 
 </x-app-layout>

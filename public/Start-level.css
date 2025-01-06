@@ -5,17 +5,18 @@ body {
 }
 
 .container {
+    margin-top: 8%;
     margin-left: 200px;
     text-align: center;
 }
 
-.icon{
+.icon {
     display: flex;
     justify-content: center; /* Centrer horizontalement */
     align-items: center;
 }
 .image_start {
-    width: 350px; /* Adjust the size as needed */
+    width: 500px; /* Adjust the size as needed */
 }
 
 h1 {
@@ -35,6 +36,9 @@ h1 {
     cursor: pointer;
     display: inline-flex;
     align-items: center;
+    justify-content: center; /* Ajouté pour centrer le texte horizontalement */
+    width: 300px;
+    text-align: center; /* Assure que le texte est centré dans le bouton */
 }
 
 .start-button:hover {
@@ -46,16 +50,15 @@ h1 {
     align-items: center;
     justify-content: flex-end;
     margin-bottom: 10px;
-    }
-    
-    .user-score {
+}
+
+.user-score {
     font-size: 18px;
     font-weight: 600;
     margin-left: 10px; /* Espace entre l'image et le score */
     margin-right: 100px;
-    }
-    
-    .dia_img {
+}
+
+.dia_img {
     width: 30px;
-    }
-    
+}

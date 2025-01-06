@@ -3,7 +3,7 @@
     @include('layouts.sidebar')
     <div class="containe_r">
         @php
-        $userScore = Auth::user()->score;  
+        $userScore = Auth::user()->score;
         @endphp
         <div class="co_score">
             <img class="dia_img" src="{{ asset('all_mbti/diamond.png') }}" alt="Congratulations">
@@ -55,7 +55,7 @@
                     </div>
                 </div>
             </div>
-        
+
             <div class="form-containe_r">
                 <h2>Submit Your Idea</h2>
 

@@ -6,6 +6,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MBTI Quiz - Start</title>
         <link rel="stylesheet" href="{{ asset('mbti_quiz.css') }}">
+        <style>
+            .progress-bar-container {
+        width: 50%; /* Taille de la barre, ajustable */
+        margin: 20px auto; /* Centrage horizontal grâce à auto */
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        height: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre pour un meilleur design */
+    }
+
+    .progress-bar {
+        height: 100%;
+        background-color: #4caf50;
+        width: 0%; /* Progression initiale */
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out;
+        </style>
     </head>
     <body>
         @include('layouts.sidebar')
@@ -13,6 +30,10 @@
             <div class="bheader">
                 <h1 class="big1">We would like to know more about you</h1>
                 <img class="imgtest" src="{{ asset('all_mbti/question-mark1.png') }}" alt="">
+            </div>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
             </div>
 
             @if ($errors->any())
@@ -42,7 +63,7 @@
                     </div>
                 @endforeach
                 <div class="center-buttons">
-                    <button type="submit" class="submit-button1" onclick="window.location.href='/mmm';">Done</button>
+                    <button type="submit" class="submit-button1">Done</button>
                 </div>
             </form>
         </div>
@@ -50,13 +71,27 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             $(document).ready(function() {
+                const totalQuestions = {{ count($questions) }};
+                let answeredQuestions = 0;
+
                 $('.answer-button').click(function() {
                     const questionKey = $(this).data('question');
                     const answerValue = $(this).data('answer');
 
-                    $('[data-question="' + questionKey + '"]').removeClass('selected');
+                    // Update the button selection
+                    const questionButtons = $('[data-question="' + questionKey + '"]');
+                    if (!$('input[name="' + questionKey + '"]').val()) {
+                        answeredQuestions++;
+                    }
+                    questionButtons.removeClass('selected');
                     $(this).addClass('selected');
+
+                    // Update the hidden input value
                     $('input[name="' + questionKey + '"]').val(answerValue);
+
+                    // Update the progress bar
+                    const progressPercent = (answeredQuestions / totalQuestions) * 100;
+                    $('#progressBar').css('width', progressPercent + '%');
                 });
             });
         </script>

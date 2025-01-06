@@ -12,7 +12,7 @@
     @include('layouts.sidebar')
     <!-- Affichage du score en haut de la page -->
     @php
-    $userScore = Auth::user()->score;  
+    $userScore = Auth::user()->score;
     @endphp
     <div class="co_score">
         <img class="dia_img" src="{{ asset('images/diamond.png') }}" alt="Congratulations">
@@ -242,7 +242,7 @@
                             wrongSound.play();
 
                             ui.helper.draggable("option", "revert", true);
-                            
+
 
                             // Ajouter une classe pour l'animation de couleur
                             ui.helper.addClass("incorrect-drop");

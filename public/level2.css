@@ -1,21 +1,23 @@
-.container{
+.container {
     margin-left: 200px;
 }
+
 .containe_r {
     max-width: 1500px;
-    margin-left: 200px;
+    margin: 0 auto; /* Centraliser horizontalement */
     padding: 20px;
     font-family: Arial, sans-serif;
 }
 
 .content-containe_r {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Grille avec 2 colonnes */
+    gap: 20px; /* Espacement entre les éléments */
     align-items: flex-start;
+    justify-content: center; /* Centraliser dans le conteneur */
 }
 
 .smart-containe_r {
-    flex-basis: 85%; /* Adjust the width of the SMART container */
     margin-right: 20px;
 }
 
@@ -32,6 +34,7 @@
     border-radius: 8px;
     padding: 10px;
     background-color: #f9f9f9;
+    position: relative;
 }
 
 .smart-letter {
@@ -58,9 +61,8 @@
 }
 
 .form-containe_r {
-    flex-basis: 55%; /* Adjust the width of the form container */
     margin-left: 20px;
-    margin-top:110px;
+    margin-top: 110px;
 }
 
 .form-containe_r h1 {
@@ -69,7 +71,7 @@
 }
 
 .form-containe_r form {
-    margin-top:45px;
+    margin-top: 45px;
     display: flex;
     flex-direction: column;
 }
@@ -85,10 +87,17 @@
     font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width:100%;
+    width: 100%;
 }
-.form-containe_r input{height: 55px;}
-.form-containe_r textarea {height: 335px;}
+
+.form-containe_r input {
+    height: 55px;
+}
+
+.form-containe_r textarea {
+    height: 335px;
+}
+
 .form-containe_r button {
     padding: 10px;
     font-size: 1em;
@@ -106,7 +115,6 @@
 .job_image {
     width: 100px;
 }
-  
 
 /* Styles pour la modal */
 .modal {
@@ -118,7 +126,7 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
@@ -130,7 +138,7 @@
     max-width: 600px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .modal .close {
@@ -165,40 +173,12 @@
     color: darkgrey;
 }
 
-/* Assurez-vous que chaque smart-item est positionné de manière relative pour placer le bouton correctement */
+/* Positionner le bouton correctement */
 .smart-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    background-color: #f9f9f9;
     position: relative;
 }
 
-.smart-letter {
-    font-size: 2em;
-    font-weight: bold;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.smart-content h3 {
-    margin: 0;
-    font-size: 1.2em;
-}
-
-.smart-content p {
-    margin: 5px 0 0;
-}
+/* Score et image */
 .co_score {
     display: flex;
     align-items: center;
@@ -209,10 +189,61 @@
 .user-score {
     font-size: 18px;
     font-weight: 600;
-    margin-left: 10px; /* Espace entre l'image et le score */
+    margin-left: 10px;
     margin-right: 100px;
 }
 
 .dia_img {
     width: 30px;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+    .content-containe_r {
+        grid-template-columns: repeat(1, 1fr); /* Une seule colonne sur écrans moyens */
+    }
+
+    .smart-containe_r, .form-containe_r {
+        flex-basis: 100%; /* Prendre toute la largeur */
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .smart-item {
+        flex-direction: column; /* Réorganiser les éléments verticalement */
+        align-items: flex-start;
+    }
+
+    .smart-letter {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .learn-more-button {
+        position: static; /* Repositionner pour mobile */
+    }
+
+    .form-containe_r textarea {
+        height: 200px; /* Réduire la hauteur */
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 90%; /* Réduire la largeur */
+    }
+
+    .form-containe_r input,
+    .form-containe_r textarea {
+        font-size: 0.9em;
+    }
+
+    .smart-letter {
+        font-size: 1.5em;
+        width: 40px;
+        height: 40px;
+    }
 }
